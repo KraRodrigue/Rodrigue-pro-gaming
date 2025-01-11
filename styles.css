@@ -1321,6 +1321,7 @@ footer{
     }
     .footer-links a, .footer-links1 a{
         font-size: 20px;
+        width: 180px;
     }
     .footer-content p{
         font-size: 14px;
