@@ -1185,7 +1185,7 @@ footer{
 
 @media screen and (max-width:768px){
     main{
-        overflow-x: hidden;
+        padding: 0 15px ;
     }
     .search-bar.active{
         transform: translateX(-10vw) translateY(12vh);
@@ -1323,4 +1323,11 @@ footer{
     .footer-content p{
         font-size: 14px;
     }
+    .tandence-new button{
+        font-size: 12px;
+    }
+    .tandence-new .game-card {
+    width: 140px;
+    height: 180px;
+    }   
 }    
