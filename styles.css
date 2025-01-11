@@ -52,7 +52,10 @@ header nav .logo{
 header nav .logo a img {
     height: 60px;
 }
-
+.logo-phone img{
+    height:25px;
+    display:none;
+}    
 /* la liste des element de navigation*/
 header nav .liste{
     height: 100%;
@@ -1337,5 +1340,18 @@ footer{
     .tandence-new .game-card {
     width: 130px;
     height: 185px;
-    }   
+    }
+    header nav .logo a img {
+    display:none;
+}
+  
+     .logo-phone img{
+        display:block;
+         position: absolute;
+         top: 10px;
+         left: 190px;
+     }
+     .logo-phone0 img {
+        display: none;
+    }  
 }    
