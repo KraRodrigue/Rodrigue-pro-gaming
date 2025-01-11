@@ -1,0 +1,1344 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    max-width: 100%;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    
+}
+
+header nav{
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.219);
+    background: #fff;
+}
+header nav .logo{
+    height: 100%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+}
+
+ /*le logo qui se trouve dans la navigation*/
+header nav .logo a img {
+    height: 60px;
+}
+.logo-phone img{
+    height:25px;
+    display:none;
+} 
+
+/* la liste des element de navigation*/
+header nav .liste{
+    height: 100%;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+header nav .liste a{
+    color: #000;
+    font-size: 1.2vw;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.liste .accueil-active{
+    color: #0070CC;
+}
+
+header nav .liste a:hover{
+    color: #175499;
+}
+
+/* la div qui contient le bouton s'abonner et la loupe*/
+.recherche{
+    height: 100%;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+ /* le bouton s'abonner qui est dans la navigation*/
+.recherche .btn{
+    position: absolute;
+    top: 20px;
+    right:70px;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 5px 10px;
+    border: none;
+    color: #fff;
+    background-color: #0070CC;
+    transition: .5s ease-in-out;
+}
+.recherche .btn:hover{
+    background: #154a86;
+}
+
+/* le boite sombre qui vien rendre l'arrier plan de la boite de recherche sombre*/
+.overlay{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    transition: 0.5s ;  
+    z-index: 12;
+    content-visibility: hidden;
+   
+}
+.overlay.active1{
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.733);
+    content-visibility: visible;
+}
+
+/*la dive di contient le formulaire et qui le faire deplacer*/ 
+.search-bar{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 20px;
+    transition: 0.5s ;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index:15; 
+    content-visibility: hidden;
+}
+.search-bar.active{
+    width: 40vw;
+    transform: translateX(-25vw) translateY(12vh);
+    display: block;
+    background: #0070CC;
+    border: 1px solid #0070CC;
+    border-radius: 10px;
+    content-visibility: visible;  
+}
+/* le formulaire avec les input pour la recherche*/
+.search-bar form{
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.search-bar input{
+    border: none;
+}
+.search-bar .input-search {
+    border-radius: 10px 0 0 10px;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 80%;
+    outline: none;
+    padding:0 10px;
+    font-size: 18px;
+}
+.search-bar .input-submit{
+    border-radius: 0 10px 10px 0;
+    height: 100%;
+    width: 20%;
+    cursor: pointer;
+    background-color: #0070CC;
+    font-size: 1.8vw;
+    color: #fff;
+} 
+
+/* le logo de la loupe */
+.search-button{
+    z-index: 10;
+    position: absolute;
+    top: 16px;
+    right: 2px;
+    cursor: pointer;
+    background: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+}
+.search-button i{
+    font-size: 22px;
+}
+.search-button i:hover{
+    color: #0070CC;
+}
+/* le croix de fermeture  qui vient avec la partie recherche*/
+.search-button1{
+    background-color:#0070CC;
+    z-index: 10;
+    position: absolute;
+    top: 16px;
+    right: 5px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+}
+.search-button1 i{
+    color: #fff;
+    font-size: 25px;
+}
+
+/* le menu beuger luis meme*/
+.menu-beuger{
+    position: absolute;
+    top: 28px;
+    left: 20px;
+    cursor: pointer;
+    display: none;
+}
+.menu-beuger i{
+    font-size: 25px;
+}
+.menu-beuger i:hover{
+    color: #0070CC;
+}
+/*les liste qui  son dans la navigation*/
+.liste-phone{
+    position: absolute;
+    left: -100vw;
+    background:  #fff;
+    height: 87vh;
+    width: 100vw;
+    padding-left: 20px;
+    transition: 0.5s ease-in-out;
+    z-index: 10;
+}
+
+/* partie menu beuger*/
+
+.liste-phone.beuger {
+    transform: translateX(100vw);
+}
+
+/* l'icone de la croix qui ferme le menu beurger*/
+.menu-close{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+.menu-close i{
+    font-size: 30px;
+}
+.menu-close i:hover{
+    color: #0070CC;
+}
+ 
+/* les liste de lien qui se trouve dans le menu-beuger*/
+.phone-a{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-top: 10px;
+}
+
+.phone-a a:hover{
+    color: #0070CC;
+}
+.liste-phone  a{
+    position: relative;
+    display: block;
+    text-transform:capitalize;
+    color: #000;
+    border-bottom: 1px solid #ffffff96;
+    height: 50px;
+    width:98% ;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+/* les plus qui son dans le menu beuger*/
+.liste-phone  a span{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 30px;
+   
+}
+
+/* le logo et texte qui se trouve dans le menu-beuger*/
+.icon-log{
+    border-bottom: 1px solid #ffffff96;
+    height: 150px;
+    width: 98%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+.icon-log h2{
+    color: #000;
+    font-size: 35px;
+}
+
+/* les boite qui vont appareite quand je vais cliquer sur les plus du menubeuger*/
+
+/* le boite android*/
+.mobile-scrol{
+    position: absolute;
+    right:70vw;
+    height: 70vh;
+    width: 20vw;
+    transform: translateY(-600px);
+    transition: 0.5s ease-in-out;
+    z-index: 10;
+    background: #fff;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.158);
+    padding: 15px;
+}
+.mobile-scrol.mobile-active{
+    transform: translateY(0);
+}
+.mobile-scrol a{
+    color: #000;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #0000009a;
+}
+.mobile-scrol a:hover{
+    color: #0070CC;
+}
+.chevron1 .chevron1-active{
+    transform: rotate(180deg);
+}
+.close i{
+    font-size: 30px;
+}
+.close i:hover{
+    color: #0070CC;
+}
+/* le boite psp*/
+.psp-scrol{
+    position: absolute;
+    right:60vw;
+    height: 70vh;
+    width: 20vw;
+    transform: translateY(-600px);
+    transition: 0.5s ease-in-out;
+    z-index: 10;
+    background: #fff;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.158);
+    padding: 15px; 
+}
+.psp-scrol.psp-active{
+    transform: translateY(0);
+}
+.psp-scrol a{
+    color:#000;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #0000009a;
+}
+.psp-scrol a:hover{
+    color: #0070CC;
+}
+.close1 i{
+    font-size: 30px;
+}
+.close1 i:hover{
+    color: #0070CC;
+}
+/* le boite ps2*/
+.ps2-scrol{
+    position: absolute;
+    right:55vw;
+    height: 70vh;
+    width: 20vw;
+    transform: translateY(-600px);
+    transition: 0.5s ease-in-out;
+    z-index: 10;
+    background: #fff;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.158);
+    padding: 15px;
+}
+.ps2-scrol.ps2-active{
+    transform: translateY(0);
+}
+.ps2-scrol a{
+    color: #000;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #0000009a;
+}
+.ps2-scrol a:hover{
+    color: #0070CC;
+}
+.close2 i{
+    font-size: 30px;
+}
+.close2 i:hover{
+    color: #0070CC;
+}
+
+/*boite pour la ps vita*/
+.psvita-scrol{
+    position: absolute;
+    right:45vw;
+    height: 70vh;
+    width: 20vw;
+    transform: translateY(-600px);
+    transition: 0.5s ease-in-out;
+    z-index: 10;
+    background: #fff;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.158);
+    padding: 15px;
+}
+.psvita-scrol.psvita-active{
+    transform: translateY(0);
+}
+.psvita-scrol a{
+    color: #000;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #0000009a;
+}
+.psvita-scrol a:hover{
+    color: #0070CC;
+}
+.close3 i{
+    font-size: 30px;
+}
+.close3 i:hover{
+    color: #0070CC;
+}
+
+/*boite pour la wii*/
+.wii-scrol{
+    position: absolute;
+    right:37vw;
+    height: 70vh;
+    width: 20vw;
+    transform: translateY(-600px);
+    transition: 0.5s ease-in-out;
+    z-index: 10;
+    background: #fff;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.158);
+    padding: 15px;
+}
+.wii-scrol.wii-active{
+    transform: translateY(0);
+}
+.wii-scrol a{
+    color: #000C;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #0000009a;
+}
+.wii-scrol a:hover{
+    color: #0070CC;
+}
+.close4 i{
+    font-size: 30px;
+}
+.close4 i:hover{
+    color: #0070CC;
+}
+
+
+/*boite pour la nintendo switch*/
+.ns-scrol{
+    position: absolute;
+    right:30vw;
+    height: 70vh;
+    width: 20vw;
+    transform: translateY(-600px);
+    transition: 0.5s ease-in-out;
+    z-index: 10;
+    background: #fff;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.158);
+    padding: 15px;
+}
+.ns-scrol.ns-active{
+    transform: translateY(0);
+}
+.ns-scrol a{
+    color: #000;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #0000009a;
+}
+.ns-scrol a:hover{
+    color: #0070CC;
+}
+.close5 i{
+    font-size: 30px;
+}
+.close5 i:hover{
+    color: #0070CC;
+}
+
+/*boite pour les pc*/
+.pc-scrol{
+    position: absolute;
+    right: 20vw;
+    height: 70vh;
+    width: 20vw;
+    transform: translateY(-600px);
+    transition: 0.5s ease-in-out;
+    z-index: 10;
+    background: #fff;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.158);
+    padding: 15px;
+}
+.pc-scrol.pc-active{
+    transform: translateY(0);
+}
+.pc-scrol a{
+    color: #000;
+    font-size: 20px;
+    display: block;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #0000009a;
+}
+.pc-scrol a:hover{
+    color: #0070CC;
+}
+.close6 i{
+    font-size: 30px;
+}
+.close6 i:hover{
+    color: #0070CC;
+}
+
+.close, .close1, .close2, .close3, .close4, .close5, .close6{
+    position: relative;
+    top: -10px;
+    left: 0;
+    cursor: pointer;
+}
+
+
+
+main{
+    margin-top: 110px;
+    padding: 0 20px ;
+}
+
+
+/* la boite qui fait une translation quant arrive sur la page */
+.translate-box{
+    height: 200px;
+    margin: 30px 0;
+}
+#box{
+    padding: 15px 30px;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transform: translateX(100%);
+    transition: transform 1s ease-out ;
+    box-shadow: 4px 3px 8px 8px rgba(0, 0, 0, 0.116);
+    color: #3b3838;
+    border-radius: 6px;
+}
+#box.visible{
+    transform: translateX(0);
+}
+.hidden-box1 h2{
+    margin-bottom: 20px;
+     color: #0070CC;
+}
+
+.hidden-box2 h3{
+     margin-top: 15px;
+     font-size: 17px;
+      color: #0070CC;
+}
+
+/* Premier carrousel */
+.carousel {
+    width: 100%;
+    height: 70vh;
+    text-align: center;
+    background-color: #fff;
+    padding: 5px 0;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    box-shadow: 4px 3px 8px 8px rgba(0, 0, 0, 0.116);
+  }
+  
+  .main-image {
+    width: 70%;
+    
+  }
+  
+  .main-image img {
+    width: 95%;
+    height: 100%;
+    border-radius: 5px;
+    transition: 1s ease-in-out;
+  }
+  
+  .controls button {
+    background-color: #154a86;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    display: none;
+  }
+  
+  .thumbnails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 30%;
+  }
+  
+  .thumbnails img {
+    width: 55%;
+    height: 100px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: border 0.3s;
+  }
+  
+  .thumbnails img.active {
+    border: 3px solid #154a86;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.493);
+  }
+
+.carousel-text{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    padding:0  30px ;
+    font-weight: 400;
+    border-radius: 6px;
+}
+.carousel-text p{
+    font-size: 3rem;
+    color:  #0070CC;
+}
+
+
+
+  /* Deuxième carrousel */
+.carousel1 {
+    width: 100%;
+    height: 90vh;
+    text-align: center;
+    background-color: #fff;
+    padding: 5px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    box-shadow: 4px 3px 8px 8px rgba(0, 0, 0, 0.116);
+    margin-bottom: 30px;
+  }
+  
+  .main-image1 {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+  }
+  
+  .main-image1 img {
+    width: 30%;
+    height: 90%;
+    border-radius: 5px;
+    transition: 1s ease-in-out;
+  }
+  
+  .image-caption {
+  font-size: 2rem;
+  color: #333;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+
+  .controls1 button {
+    background-color: #154a86;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    display: none;
+  }
+  
+  .thumbnails1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    height: 25%;
+    overflow: auto; /* Permet de faire défiler les miniatures si elles sont nombreuses */
+  }
+  
+  .thumbnails1 img {
+    width: 50%;  /* Réduit la largeur des miniatures pour faire plus de place */
+    height: 70px; /* Ajuste la hauteur en conséquence */
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: border 0.3s;
+    margin-left: 6px;
+    padding: 5px;
+  }
+  
+  .thumbnails1 img.active {
+    border: 3px solid #154a86;
+    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.493);
+  }
+  
+.tandence-new{
+    width: 100%;
+    background: #000000;
+    box-shadow: 4px 3px 8px 8px rgba(0, 0, 0, 0.116);
+    border-radius: 10px;
+    margin: 30px 0;
+    padding: 30px 0;
+    
+}
+
+.tandence-new .container {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.tandence-new h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 200;
+}
+
+.tandence-new .buttons {
+    margin-bottom: 20px;
+    height: 100px;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.tandence-new button {
+    background-color: #191A1C;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 5px;
+    height: 40px;
+    transition: background-color 0.3s, color 0.3s;
+    
+}
+
+.tandence-new button.active {
+    background-color: #fff;
+    color: #000;
+}
+
+.tandence-new .games {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.game-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.game-card1{
+    display: flex;
+    justify-content: center;
+    gap:15px ;
+    flex-wrap: wrap
+}
+
+.tandence-new .game-card {
+    width: 170px;
+    height: 180px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.tandence-new .game-card img {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.tandence-new .game-card img:hover {
+    transform: scale(1.08);
+}
+
+.tandence-new .game-card p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #faf3f3;
+}
+
+/* Masquer la section inactive */
+.tandence-new .game-section {
+    display: none;
+}
+
+.tandence-new .game-section.active {
+    display: flex;
+}
+
+
+
+
+
+
+  
+.avant-game{
+    height: 150px;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    gap: 10px;
+    padding: 0 30px;
+}  
+
+.avant-game h4{
+    font-size: 2rem;
+    color: #0070CC;
+}
+.avant-game p{
+    font-size: 1.5rem;
+     color: #0070CC;
+}  
+.box-games{
+    width: 100%;
+    height: 250px;
+    background: #fff;
+    box-shadow: 4px 3px 8px 8px rgba(0, 0, 0, 0.116);
+    display: flex;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+.gamme-image{
+    height: 100%;
+    width: 40%;
+    padding: 10px;
+    
+}
+.gamme-image a img{
+    height: 100%;
+    width: 90%;
+}
+
+.game-texte{
+    height: 100%;
+    width: 60%;
+    padding: 10px;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
+.game-texte a{
+    color: #000;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: .5s ease-in-out;
+}
+
+.game-texte a:hover{
+    color: #0070CC;
+}
+
+
+
+
+
+footer{
+    margin: 0;
+    width: 100%;
+    background: #00439C;
+}
+
+.footer-nav{
+    display: flex;
+    margin-bottom: 40px;
+    padding-top: 20px;
+    justify-content: space-between;
+    
+}
+
+.footer-logo{
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    padding-left: 30px;
+
+}
+.footer-logo img{
+    height: 80px;
+    width: 80px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+
+}
+.footer-logo h5{
+     font-size: 25px;
+     font-weight: 400;
+     margin-bottom: 10px;
+     color: #ffff;
+}
+.footer-logo p{
+    color: #fff;
+    font-size: 15px;
+}
+.footer-logo p a{
+    color: #fff;
+    text-decoration: underline;
+}
+.footer-logo p a:hover{
+    color: #adb2c4;
+}
+
+.link-link{
+    width: 60%;
+    display: flex;
+}
+.footer-links{
+    width: 50%;
+    
+}
+.footer-links a{
+    display: block;
+    color: #fff;
+    font-size: 25px;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    width: 150px;
+    margin-bottom: 5px;
+}
+.footer-links1{
+    width: 50%;
+}
+.footer-links1 a{
+    display: block;
+    color: #fff;
+    font-size: 25px;
+    color:#fff;
+    border-bottom: 1px solid #fff;
+    width: 250px;
+    margin-bottom: 5px;
+}
+.footer-content{
+    padding-top: 20px;
+    border-top: .5px solid #ffff;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-content p{
+    color: #fff;
+}
+
+.link-icone{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.link-icone i{
+    font-size: 35px;
+    color:#fff;
+    margin-left: 20px;
+}
+.link-icone i:hover{
+    color: #adb2c4;
+}
+
+
+
+
+
+@media screen and (max-width:1024px){
+    .menu-beuger{
+        display: block;
+    }
+    header nav .liste{
+        display: none;
+    }
+    .search-bar.active{
+        transform: translateX(-20vw) translateY(12vh);
+    }
+    .search-button{
+        left: 80px;
+    }
+    .icon-log h2{
+        font-size: 60px;
+    }
+    .pc-scrol, .ns-scrol, .wii-scrol, .psvita-scrol, .ps2-scrol, .psp-scrol, .mobile-scrol{
+        position: absolute;
+        right: 0;
+        height: 87vh;
+        width: 80vw;
+        transform: translateY(-4000px);
+        transition: 0.5s ease-in-out;
+        z-index: 10;
+        background: #ffffff;
+        box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.158);
+    }
+    .hidden-box1 h2{
+        font-size: 20px;
+    }
+    .hidden-box1 p{
+        font-size: 12px;
+    }
+    .hidden-box2 h3{
+        font-size: 20px;
+    }
+    .hidden-box2 p{
+        font-size: 12px;
+    }
+    .hidden-box2{
+        margin-left: 10px;
+    }
+
+    .carousel {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 500px;      
+      }
+      .main-image{
+        width: 95%;
+        height: 70%;
+        
+      }
+
+      .thumbnails {
+        flex-direction: initial;
+        width: 100%;
+        
+        gap: 10px;
+        margin-top: 20px;
+        
+      }
+      .thumbnails img {
+        width: 22%;
+        height: 87px
+      }
+
+
+      .carousel1{
+        height: 500px;
+      }
+      .main-image1{
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+      }
+      .thumbnails1{
+        height: 20%;
+      }
+      #image-caption1 {
+        width: 90%;
+        height: 40%;
+        font-size: 16px;
+      }
+
+      #displayed-image1{
+        height: 55%;
+      }
+      .box-games{
+        height: 180px;
+    }
+    .footer-nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .link-link{
+        padding-top: 15px;
+        border-top: .5px solid #ffff;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer-logo{
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-logo img{
+        margin-left: 0;
+    }
+    .footer-links{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-links1{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-content p{
+        font-size: 25px;
+    }
+}  
+
+
+
+
+@media screen and (max-width:768px){
+
+    .search-bar.active{
+        transform: translateX(-10vw) translateY(12vh);
+        width: 300px;
+    }
+
+    .search-bar .input-submit{
+        font-size: 15px;
+    }
+   
+    .search-button{
+        left: 50px;
+    }
+    .recherche .btn{
+        right: 25px;
+    }
+
+    .icon-log h2{
+        font-size: 35px;
+    }
+
+    .translate-box{
+        height: 200px;
+    }
+
+    #box{
+        padding: 5px 15px;
+    }
+
+    .hidden-box1 h2{
+        font-size: 17px;
+        margin-bottom: 5px;
+    }
+
+    .hidden-box1 p{
+        font-size: 12px;
+    }
+
+    .hidden-box2{
+        margin-left: 5px;
+    }
+
+    .hidden-box2 h3{
+        font-size: 12px;
+        margin-top: 6px;
+    }
+
+    .hidden-box2 p{
+        font-size: 11px;
+    }
+
+
+
+
+    .carousel {
+        flex-direction: column;
+        height: 350px;
+        justify-content: center;
+        align-items: center;      
+    }
+
+    .main-image{
+        width: 95%;
+    }
+
+    .thumbnails {
+        flex-direction: initial;
+        width: 100%;
+        gap: 10px;
+        margin-top: 20px; 
+    }
+
+    .thumbnails img {
+        width: 20%;
+        height: 40px;
+    }
+
+    .hidden{
+        overflow-x: auto;
+    }
+
+    .carousel-text{
+        height: 150px;
+    }
+
+    .carousel-text p{
+        font-size: 1.5rem;
+    }
+
+
+
+
+
+    .carousel1{
+        height: 450px;
+    }
+    .main-image1{
+        height: 70%;
+        margin-bottom: 20px;
+    }
+
+    .image-caption{ 
+        font-size: 16px;
+    }
+    
+    .avant-game h4{
+         font-size: 1rem;
+    }
+    .avant-game p{
+        font-size: 0.8rem;
+    }
+    .box-games{
+        height: 130px;
+    }
+    .avant-game{
+        height: 100px;
+    }
+
+    .gamme-image a img{
+        width: 100%;
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .game-texte a{
+        font-size: 1rem;
+    }
+
+
+    .footer-links a, .footer-links1 a{
+        font-size: 20px;
+    }
+    .footer-content p{
+        font-size: 14px;
+    }
+    .tandence-new button{
+        font-size: 12px;
+    }
+    .tandence-new .game-card {
+    width: 130px;
+    height: 185px;
+    }  
+    .logo-phone img{
+        display:block;
+         position: absolute;
+         top: 10px;
+         left: 150px;
+     }
+     .logo-phone0 img {
+        display: none;
+    }  
+}    
