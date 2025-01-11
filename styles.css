@@ -1340,11 +1340,7 @@ footer{
     .tandence-new .game-card {
     width: 130px;
     height: 185px;
-    }
-    header nav .logo a img {
-    display:none;
-}
-  
+    }  
      .logo-phone img{
         display:block;
          position: absolute;
