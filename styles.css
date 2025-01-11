@@ -839,7 +839,7 @@ main{
 
 .tandence-new .game-card {
     width: 170px;
-    height: 180px;
+    height:250px;
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s;
