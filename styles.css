@@ -21,7 +21,7 @@ header{
     top: 0;
     left: 0;
     z-index: 100;
-    overflow-x: hidden;
+   
 }
 
 header nav{
@@ -37,6 +37,7 @@ header nav{
     text-align: center;
     box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.219);
     background: #fff;
+     overflow-x: hidden;
 }
 header nav .logo{
     height: 100%;
