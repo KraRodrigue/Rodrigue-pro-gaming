@@ -1316,7 +1316,9 @@ footer{
         font-size: 1rem;
     }
 
-
+    .link-link{
+         padding:0 15px;
+    }
     .footer-links a, .footer-links1 a{
         font-size: 20px;
     }
@@ -1325,6 +1327,8 @@ footer{
     }
      .footer-content {
         padding:0 15px;
+        display:flex;
+        justify-content:center;
     }
     .tandence-new button{
         font-size: 12px;
