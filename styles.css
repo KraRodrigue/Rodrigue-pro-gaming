@@ -1323,6 +1323,9 @@ footer{
     .footer-content p{
         font-size: 14px;
     }
+     .footer-content {
+        padding:0 15px;
+    }
     .tandence-new button{
         font-size: 12px;
     }
