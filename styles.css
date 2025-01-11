@@ -1318,9 +1318,14 @@ footer{
         font-size: 1rem;
     }
 
-
     .footer-links a, .footer-links1 a{
         font-size: 20px;
+        width: 150px;
+    }
+    .footer-content{
+        padding: 0 15px;
+        display: flex;
+        justify-content: center;
     }
     .footer-content p{
         font-size: 14px;
