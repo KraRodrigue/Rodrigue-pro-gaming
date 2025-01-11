@@ -1,51 +1,51 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    text-decoration: none;
-    max-width: 100%;
+    rembourrage: 0;
+    margarine: 0;
+    dimensionnement de la boîte: bordure-boîte;
+    famille de police: Arial, sans empattement;
+    décoration de texte: aucun;
+    largeur maximale: 100%;
 }
 
-html, body {
-    height: 100%;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
+HTML, corps {
+    hauteur: 100%;
+    largeur: 100%;
+    rembourrage: 0;
+    margarine: 0;
+    débordement-x: caché;
 }
 
-header{
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
+en tête{
+    largeur: 100%;
+    position: réparer;
+    Haut: 0;
+    gauche: 0;
+    indice z: 100;
    
 }
 
-header nav{
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    height: 80px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.219);
-    background: #fff;
+fr navigation en tête{
+    position: relatif;
+    Haut: 0;
+    gauche: 0;
+    indice z: 100;
+    hauteur: 80px;
+    largeur: 100%;
+    afficher: fléchir;
+    justifier-contenu: centre;
+    aligner les éléments: centre;
+    aligner le texte: centre;
+    boîte-ombre: 4px 8px 8px rgba(0, 0, 0, 0.219);
+    arrière-plan: #fff;
      
 }
 header nav .logo{
     height: 100%;
-    width: 10%;
-    display: flex;
+    largeur: 10%;
+    afficher: flex;
     justify-content: center;
-    align-items: center;
-    align-items: center;
+    aligner les éléments: center;
+    aligner les éléments: center;
 }
 
  /*le logo qui se trouve dans la navigation*/
@@ -71,7 +71,7 @@ header nav .liste a{
     text-transform: uppercase;
     color: #000;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s facilité d'entrée et de sortie;
 }
 .liste .accueil-active{
     color: #0070CC;
@@ -344,7 +344,7 @@ header nav .liste a:hover{
     font-size: 20px;
     display: block;
     margin-bottom: 20px;
-    border-bottom: 1px solid #0000009a;
+    border-bottom: 1px solid #0000009un;
 }
 .mobile-scrol a:hover{
     color: #0070CC;
@@ -766,7 +766,7 @@ main{
     background: #000000;
     box-shadow: 4px 3px 8px 8px rgba(0, 0, 0, 0.116);
     border-radius: 10px;
-    margin: 30px 0;
+    marge: 30px 0;
     padding: 30px 0;
     
 }
@@ -989,7 +989,7 @@ footer{
 }
 
 .link-link{
-    width: 60%;
+    largeur: 60%;
     display: flex;
 }
 .footer-links{
@@ -1319,7 +1319,7 @@ footer{
         font-size: 1rem;
     }
 
-    .link-link{
+    .lien-lien{
          padding:0 15px;
     }
     .footer-links a, .footer-links1 a{
@@ -1327,17 +1327,17 @@ footer{
         width: 150px;
     }
     .footer-content p{
-        font-size: 14px;
+        taille de police: 14px;
     }
-     .footer-content {
-        padding:0 15px;
+     .contenu du pied de page {
+        rembourrage:0 15px;
         display:flex;
         justify-content:center;
     }
-    .tandence-new button{
+    .bouton tantance-nouveau{
         font-size: 12px;
     }
-    .tandence-new .game-card {
+    .tanance-nouvelle .game-card {
     width: 130px;
     height: 185px;
     }  
@@ -1345,9 +1345,9 @@ footer{
         display:block;
          position: absolute;
          top: 10px;
-         left: 190px;
+         left: 150px;
      }
-     .logo-phone0 img {
+     .img {
         display: none;
     }  
 }    
