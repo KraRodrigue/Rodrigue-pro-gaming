@@ -1188,6 +1188,10 @@ footer{
 
 
 @media screen and (max-width:768px){
+    main{
+  
+    padding: 0 15px ;
+}
 
     .search-bar.active{
         transform: translateX(-10vw) translateY(12vh);
