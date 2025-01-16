@@ -1352,6 +1352,15 @@ footer{
    font-size: 20px;
    
 }
+.box-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box-link .lien-unique{
+    width: 180px;
+}
+    
 
 
     .footer-links a, .footer-links1 a{
